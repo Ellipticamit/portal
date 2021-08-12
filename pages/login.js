@@ -1,13 +1,12 @@
-import MyModal from 'component/MyModal';
-import Input from 'component/Input';
+import Input from 'component/Input'
 
-function login(props) {
+function login (props) {
   return (
     <>
       <section className='p-tb30'></section>
       <section
         className='content-inner'
-        style={{backgroundImage: 'url(images/background/bg1.png)'}}
+        style={{ backgroundImage: 'url(images/background/bg1.png)' }}
       >
         <div className='container'>
           <div className='row '>
@@ -77,10 +76,10 @@ function login(props) {
         </div>
       </section>
     </>
-  );
+  )
 }
 
-export default login;
+export default login
 
 /*
   <div className='container'> Login page</div>
