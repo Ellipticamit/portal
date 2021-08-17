@@ -8970,6 +8970,11 @@ section {
   51% {
     opacity: 1; } }
 
+.box {
+  display: flex;
+  padding: 10px;
+  background: rgba(137, 110, 255, 0.1); }
+
 .form-group {
   position: relative; }
   .form-group label {
@@ -9372,10 +9377,12 @@ textarea {
   .input-new-group label {
     font-size: 16px;
     font-weight: 700;
-    color: #888;
+    color: #262f5a;
     margin-bottom: 10px;
     background: transparent;
     border-color: #896eff; }
+    .input-new-group label .required {
+      color: #ff5269; }
 
 .icon-bx-xl {
   display: inline-block;

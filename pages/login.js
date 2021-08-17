@@ -1,12 +1,27 @@
-import Input from 'component/Input'
+import {useState} from 'react';
+import Link from 'next/link';
+import Input from 'component/Input';
 
-function login (props) {
+function login(props) {
+  const [userData, setUserData] = useState();
+
+  const onValueChange = (name, value) => {
+    setUserData({
+      ...userData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('form', userData);
+  };
   return (
     <>
       <section className='p-tb30'></section>
       <section
         className='content-inner'
-        style={{ backgroundImage: 'url(images/background/bg1.png)' }}
+        style={{backgroundImage: 'url(images/background/bg1.png)'}}
       >
         <div className='container'>
           <div className='row '>
@@ -15,15 +30,25 @@ function login (props) {
               data-wow-duration='2s'
               data-wow-delay='0.2s'
             >
-              <div className='section-head style-1'>
-                <h6 className='sub-title bgl-primary m-b20 text-primary'>
-                  <a href=''>Login</a>
-                </h6>
-
-                <h6 className='sub-title bgl-primary m-b20 text-primary m-l20'>
-                  Register
-                </h6>
+              <div className='section-head style-1 m-r70'>
+                <div className='row justify-content-between m-lr0'>
+                  <Link href='/login'>
+                    <a className='btn btn-link d-inline-flex align-items-center '>
+                      <h6 className='sub-title bgl-primary m-b20 text-primary'>
+                        Login
+                      </h6>
+                    </a>
+                  </Link>
+                  <Link href='/register'>
+                    <a className='btn btn-link d-inline-flex align-items-center '>
+                      <h6 className='sub-title m-b20 text-primary'>
+                        Register for Free
+                      </h6>
+                    </a>
+                  </Link>
+                </div>
               </div>
+
               <form className='dlab-form dzForm ' method='POST' action=''>
                 <div className='dzFormMsg'></div>
                 <input
@@ -39,6 +64,9 @@ function login (props) {
                       label='Email'
                       placeholder='Enter Email...'
                       type='text'
+                      name='email'
+                      onValueChange={onValueChange}
+                      required={true}
                     />
                   </div>
                   <div className='col-sm-10'>
@@ -47,6 +75,9 @@ function login (props) {
                       label='Password'
                       placeholder='Enter Password...'
                       type='password'
+                      name='password'
+                      onValueChange={onValueChange}
+                      required={true}
                     />
                   </div>
 
@@ -76,10 +107,10 @@ function login (props) {
         </div>
       </section>
     </>
-  )
+  );
 }
 
-export default login
+export default login;
 
 /*
   <div className='container'> Login page</div>

@@ -1,4 +1,4 @@
-function Process(props) {
+function Process (props) {
   return (
     <section className='content-inner-2'>
       <div className='container'>
@@ -34,7 +34,7 @@ function Process(props) {
               </div>
               <div className='icon-bx-wraper style-2 left m-b30'>
                 <div className='icon-bx-md radius bg-white text-yellow'>
-                  <a href='javascript:void(0);' className='icon-cell'>
+                  <a href='' className='icon-cell'>
                     <i className='flaticon-line-graph'></i>
                   </a>
                 </div>
@@ -48,7 +48,7 @@ function Process(props) {
               </div>
               <div className='icon-bx-wraper style-2 left m-b30'>
                 <div className='icon-bx-md radius bg-white text-green'>
-                  <a href='javascript:void(0);' className='icon-cell'>
+                  <a href='' className='icon-cell'>
                     <i className='flaticon-rocket'></i>
                   </a>
                 </div>
@@ -75,7 +75,7 @@ function Process(props) {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default Process;
+export default Process

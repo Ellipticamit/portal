@@ -16,9 +16,7 @@ function Header(props) {
             {/* <!-- Website Logo --> */}
             <div className='logo-header mostion logo-dark'>
               <Link href='/'>
-                <a>
-                  <img src='images/logo.png' alt='' />
-                </a>
+                <a>LOGO IMAGE</a>
               </Link>
             </div>
             {/* <!-- Nav Toggle Button --> */}
@@ -35,14 +33,14 @@ function Header(props) {
             {/* <!-- Extra Nav --> */}
             <div className='extra-nav '>
               <div className='extra-cell bgl-primary '>
-                <Link href='login'>
+                <Link href='/login'>
                   <a className='btn btn-link d-inline-flex align-items-center '>
                     Login
                   </a>
                 </Link>
                 <span className='m-lr5'> /</span>
 
-                <Link href='register'>
+                <Link href='/register'>
                   <a className='btn btn-link d-inline-flex align-items-center'>
                     Join
                   </a>

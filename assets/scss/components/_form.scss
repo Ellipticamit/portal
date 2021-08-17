@@ -537,9 +537,12 @@ textarea {
   label {
     font-size: 16px;
     font-weight: 700;
-    color: $body-color;
+    color: $dark;
     margin-bottom: 10px;
     background: transparent;
     border-color: $primary;
+    .required {
+      color: $danger;
+    }
   }
 }
